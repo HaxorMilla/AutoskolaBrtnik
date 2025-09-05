@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <li><a href="vozidla.html">Vozidla</a></li>
         <li><a href="kontakty.html">Kontakty</a></li>
         <li><a href="kestazeni.html">Ke stažení</a></li>
+		<li><a href="podminky.html">Podmínky</a></li>
       </ul>
     </nav>
     `;
