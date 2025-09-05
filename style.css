@@ -516,3 +516,44 @@ body::before {
   z-index: 0;
   pointer-events: none;
 }
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 150px;
+  background: linear-gradient(
+    90deg,
+    #a6d4ff 0%,   /* světlejší modrá vlevo */
+    #004080 50%,  /* tmavá modrá uprostřed (pod logem) */
+    #a6d4ff 100%  /* světlejší modrá vpravo */
+  );
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  flex-shrink: 0;
+  background: linear-gradient(
+    90deg,
+    #a6d4ff 0%,    /* světlejší modrá vlevo */
+    #004080 50%,   /* tmavší modrá uprostřed */
+    #a6d4ff 100%   /* světlejší modrá vpravo */
+  );
+  color: white;
+  text-align: center;
+  padding: 25px 0; /* trošku vyšší */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+footer a {
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0 10px;
+}
