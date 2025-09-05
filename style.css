@@ -394,3 +394,66 @@ section ul li::before {
     grid-template-columns: 1fr;
   }
 }
+/* ===== HEADER FLEX ===== */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-title img {
+  max-height: 80px;
+}
+
+.logo-title h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+/* ===== MENU TOGGLE ===== */
+.menu-toggle {
+  display: none; /* jen mobil */
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .logo-title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-title h1 {
+    font-size: 1.4em; /* menší text */
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    margin-right: 15px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #0066cc;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav li a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
