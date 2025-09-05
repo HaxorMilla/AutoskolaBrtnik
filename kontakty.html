@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakty | Autoškola Radek Brtník</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2, h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+
+    /* KONTAKTY GRID */
+    .kontakt-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px auto;
+      max-width: 900px;
+    }
+
+    .kontakt-form, .instruktori-grid {
+      flex: 1 1 300px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* FORMULÁŘ */
+    .kontakt-form {
+      background: linear-gradient(135deg, #004080, #0066cc);
+      color: white;
+    }
+
+    .kontakt-form h3 {
+      color: #ffd700;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    form input {
+      background-color: #e0f0ff;
+      color: #004080;
+    }
+
+    form textarea {
+      background-color: #e0f0ff;
+      color: #004080;
+    }
+
+    form button {
+      margin-top: 10px;
+      padding: 12px 25px;
+      background-color: #ffd700;
+      color: #004080;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #ffc000;
+    }
+
+    /* INSTRUKTOŘI */
+    .instruktori-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background: linear-gradient(135deg, #ffffff, #f0f5ff);
+    }
+
+    .instruktor {
+      background-color: #cce0ff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .instruktor strong {
+      color: #004080;
+      font-size: 1.1em;
+    }
+
+    /* POBOČKY */
+    .pobocky-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pobocka {
+      flex: 1 1 250px;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .pobocka:hover {
+      transform: translateY(-5px);
+    }
+
+    .pobocka p {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #004080;
+    }
+
+    .pobocka a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .pobocka a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 800px) {
+      .kontakt-container {
+        flex-direction: column;
+      }
+
+      .pobocky-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="header-container"></div>
+
+<section>
+  <h2>Kontakty</h2>
+
+  <div class="kontakt-container">
+    <!-- FORMULÁŘ -->
+    <div class="kontakt-form">
+      <h3>Napište nám</h3>
+      <form action="sendmail.php" method="POST">
+        <label>Jméno:
+          <input type="text" name="name" required>
+        </label>
+        <label>Email:
+          <input type="email" name="email" required>
+        </label>
+        <label>Zpráva:
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Odeslat</button>
+      </form>
+    </div>
+
+    <!-- INSTRUKTOŘI -->
+    <div class="instruktori-grid">
+      <div class="instruktor">
+        <strong>Radek Brtník</strong>
+        <p>Tel.: 777 777 181</p>
+        <p>E-mail: <a href="mailto:radekbrtnik@seznam.cz">radekbrtnik@seznam.cz</a></p>
+        <p>Skupiny: A, AM, B, B+E, C, C+E, D, T</p>
+      </div>
+      <div class="instruktor">
+        <strong>Hana Mertová</strong>
+        <p>Tel.: 777 777 182</p>
+        <p>Skupiny: B</p>
+      </div>
+      <div class="instruktor">
+        <strong>David Majárek</strong>
+        <p>Tel.: 777 777 183</p>
+        <p>Skupiny: A, AM, B, B+E, C, C+E</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- POBOČKY -->
+  <h3>Kde nás najdete</h3>
+  <div class="pobocky-grid">
+    <div class="pobocka">
+      <p>Slavkov u Brna – Lidická 1452</p>
+      <a href="https://share.google/vCm0u7aSTWnujHFCx" target="_blank">Mapa</a>
+    </div>
+    <div class="pobocka">
+      <p>Bučovice – Komenského 211</p>
+      <a href="https://share.google/eSMFosmy4OrRmQF1M" target="_blank">Mapa</a>
+    </div>
+    <div class="pobocka">
+      <p>Vyškov – Na Hraničkách 15</p>
+      <a href="https://share.google/RPqhjb8uV5d89vRHR" target="_blank">Mapa</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-container"></div>
+<script src="header.js"></script>
+<script src="footer.js"></script>
+</body>
+</html>
