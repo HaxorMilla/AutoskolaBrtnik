@@ -675,4 +675,41 @@ nav li a.active {
   opacity: 1;
   transform: translateY(0);
 }
+/* ===== CONTAINER PRO HEADER ===== */
+header {
+  max-width: 1200px;      /* nebo stejná šířka jako footer */
+  margin: 20px auto;      /* centrování */
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #4da6ff 0%, #004080 50%, #4da6ff 100%);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Logo a název zůstává ve flexu */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Mobilní úprava */
+@media (max-width: 768px) {
+  header {
+    max-width: 95%;  /* flexibilní šířka na mobilu */
+    padding: 15px;
+  }
+  .logo-title {
+    flex-direction: column;
+    text-align: center;
+  }
+  .logo-title h1 {
+    font-size: 1.4em;
+  }
+}
+
 
