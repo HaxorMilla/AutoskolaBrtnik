@@ -36,19 +36,3 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".menu-toggle").addEventListener("click", () => {
         document.querySelector("nav ul").classList.toggle("show");
     });
-
-    // FOOTER
-    const footerHTML = `
-      <footer class="site-footer">
-        <div class="footer-links">
-          <a href="https://etesty2.mdcr.cz" target="_blank">Elektronické testy MDČR</a>
-          <a href="https://jan-muller.cz" target="_blank">Vytvořil Jan Müller</a>
-        </div>
-        <div class="footer-info">
-          <p><strong>IČO:</strong> 28266145</p>
-          <p><strong>Datová schránka:</strong> sf3v5i5</p>
-        </div>
-      </footer>
-    `;
-    document.getElementById("footer-container").innerHTML = footerHTML;
-});
