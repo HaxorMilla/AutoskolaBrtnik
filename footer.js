@@ -1,4 +1,5 @@
-   const footerHTML = `
+    // ===== FOOTER =====
+    const footerHTML = `
       <footer class="site-footer">
         <div class="footer-links">
           <a href="https://etesty2.mdcr.cz" target="_blank">Elektronické testy MDČR</a>
@@ -13,3 +14,4 @@
     document.getElementById("footer-container").innerHTML = footerHTML;
 
 });
+
