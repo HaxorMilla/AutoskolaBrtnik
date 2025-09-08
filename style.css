@@ -557,3 +557,122 @@ footer a {
   font-weight: bold;
   margin: 0 10px;
 }
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: linear-gradient(135deg, #4da6ff 0%, #004080 50%, #4da6ff 100%);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-title img {
+  max-height: 80px;
+}
+
+.logo-title h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+/* ===== NAVIGACE ===== */
+nav {
+  width: 100%;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  background-color: #0066cc;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav li a:hover,
+nav li a.active {
+  background-color: #004080;
+  transform: translateY(-2px);
+}
+
+/* ===== HAMBURGER MENU ===== */
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .logo-title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-title h1 {
+    font-size: 1.4em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul.show {
+    max-height: 500px; /* dostatečně velké pro všechny položky */
+    opacity: 1;
+    padding: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-top: 10px;
+  }
+
+  nav li a {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+/* ===== SMOOTH FADE-IN EFFECTS ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
