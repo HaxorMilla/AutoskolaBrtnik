@@ -719,7 +719,7 @@ header {
 
   /* Logo větší */
   .logo-title img {
-    max-height: 120px;  /* zvětšíme oproti desktopu */
+    max-height: 2400px;  /* zvětšíme oproti desktopu */
   }
 
   /* Nápis menší */
@@ -728,6 +728,7 @@ header {
     margin-top: 10px;   /* odsazení od loga */
   }
 }
+
 
 
 
