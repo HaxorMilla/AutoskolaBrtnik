@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // HEADER
+
+    // ===== HEADER =====
     const headerHTML = `
       <header class="site-header">
         <div class="logo-title">
@@ -33,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // toggle menu na mobilu
-    document.querySelector(".menu-toggle").addEventListener("click", () => {
-        document.querySelector("nav ul").classList.toggle("show");
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav ul");
+    toggle.addEventListener("click", () => {
+        nav.classList.toggle("show");
     });
